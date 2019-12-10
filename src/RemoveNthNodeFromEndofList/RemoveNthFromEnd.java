@@ -1,6 +1,12 @@
 package RemoveNthNodeFromEndofList;
 
 
+/**
+ * 利用递归的方式，找到最后一位后依次返回自己的位数，当遇到位数相等时，移除这一个节点。
+ * 需要排除的特殊情况：
+ *  1. 只有1个数。
+ *  2. 头节点就是需要移除的节点。
+ */
 public class RemoveNthFromEnd {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
@@ -15,7 +21,6 @@ public class RemoveNthFromEnd {
             listNode = listNode.next;
         }
     }
-
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         int i = removeNode(head, n);
         switch (i){
