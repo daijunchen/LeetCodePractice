@@ -65,20 +65,4 @@ public class GenerateParentheses {
         return result;
     }
 
-    static boolean match(char left, char right){
-        switch (left){
-            case '(':
-                return ')' == right;
-            default:
-                return false;
-        }
-    }
-    static String checkChar(String c){
-        switch (c){
-            case ")":
-                return "(";
-            default:
-                return c;
-        }
-    }
 }
